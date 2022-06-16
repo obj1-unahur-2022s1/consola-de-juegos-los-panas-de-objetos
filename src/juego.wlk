@@ -1,5 +1,6 @@
 import wollok.game.*
 import consola.*
+import bomberman.*
 
 class Juego {
 	var property position = null
@@ -15,4 +16,11 @@ class Juego {
 	method image() = "juego" + color + ".png"
 	
 
+}
+
+object bomberman inherits Juego(color = null) {
+	override method iniciar() {
+		nivel1.configurar()
+	}
+	method image() = "bman_head.png"
 }
